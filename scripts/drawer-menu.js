@@ -5,21 +5,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = drawer.querySelector('.drawer-close');
     const links = drawer.querySelectorAll('a');
 
+    // Open drawer
     openBtn.addEventListener('click', () => {
         drawer.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
     });
+
+    // Close drawer
     closeBtn.addEventListener('click', () => {
         drawer.classList.remove('open');
-        document.body.style.overflow = '';
+        document.body.style.overflow = ''; // Restore scrolling
     });
+
+    // Close drawer when a link is clicked
     links.forEach(link => {
         link.addEventListener('click', () => {
             drawer.classList.remove('open');
             document.body.style.overflow = '';
         });
     });
-    // Close drawer on ESC
+
+    // Close drawer on ESC key press
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             drawer.classList.remove('open');

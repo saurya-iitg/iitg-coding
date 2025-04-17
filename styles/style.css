@@ -197,9 +197,9 @@ footer {
     width: 240px;
     height: 100vh;
     background: #181c24;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.18);
     z-index: 1001;
-    transition: left 0.3s cubic-bezier(.4,0,.2,1);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding-top: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -223,7 +223,8 @@ footer {
     font-weight: 600;
     transition: color 0.2s;
 }
-.drawer-nav a:hover, .drawer-nav .active {
+.drawer-nav a:hover,
+.drawer-nav .active {
     color: #e63946;
 }
 .drawer-close {
@@ -290,8 +291,8 @@ footer {
     .drawer-toggle {
         display: block;
     }
-    header nav {
-        display: none !important;
+    header nav.desktop-nav {
+        display: none;
     }
 }
 

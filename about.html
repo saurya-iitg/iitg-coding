@@ -16,11 +16,27 @@
                     <img src="logo-placeholder.png" alt="Logo">
                     Coding Club, IIT Guwahati
                 </a>
-            </span>
-            <nav>
+            </span> <!-- Drawer toggle button for mobile -->
+            <button class="drawer-toggle" aria-label="Open Menu">
+                &#9776; <!-- Triple bar icon -->
+            </button>
+            <!-- Drawer menu -->
+            <nav class="drawer-nav" id="drawer-nav">
+                <button class="drawer-close" aria-label="Close Menu">&times;</button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="initiatives.html">Initiatives</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Desktop navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="initiatives.html">Initiatives</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="team.html">Team</a></li>
@@ -44,5 +60,6 @@
         <p>&copy; 2024 Coding Club, IIT Guwahati. All rights reserved.</p>
     </footer>
     <script src="scripts/coding-bg.js"></script>
+    <script src="scripts/drawer-menu.js"></script>
 </body>
 </html>
