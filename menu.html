@@ -1,0 +1,35 @@
+<!-- Persistent, modern header for mobile and desktop -->
+<header class="main-header">
+    <div class="container header-flex">
+        <span class="logo">
+            <a href="index.html" id="logo-link">
+                <img src="logo-placeholder.png" alt="Logo">
+                Coding Club, IIT Guwahati
+            </a>
+        </span>
+        <!-- Drawer menu placeholder for mobile -->
+        <div id="drawer-menu-placeholder"></div>
+        <!-- Desktop navigation -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="initiatives.html">Initiatives</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script>
+    // Load drawer menu HTML and JS for mobile
+    fetch('menu.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('drawer-menu-placeholder').innerHTML = html;
+            const script = document.createElement('script');
+            script.src = 'scripts/drawer-menu.js';
+            document.body.appendChild(script);
+        });
+</script>

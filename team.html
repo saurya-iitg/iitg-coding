@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Coding Club - IITG</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <canvas class="coding-bg" id="coding-bg"></canvas>
+    <header>
+        <div class="container">
+            <span class="logo">
+                <a href="index.html" id="logo-link">
+                    <img src="logo-placeholder.png" alt="Logo">
+                    Coding Club, IIT Guwahati
+                </a>
+            </span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="initiatives.html">Initiatives</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Meet the Team</h2>
+            <div class="team-list">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="President">
+                    <p><strong>Rahul Sharma</strong><br>President</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Vice President">
+                    <p><strong>Ananya Singh</strong><br>Vice President</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="AI Lead">
+                    <p><strong>Vikram Patel</strong><br>AI Lead</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Coding Club, IIT Guwahati. All rights reserved.</p>
+    </footer>
+    <script src="scripts/coding-bg.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoLink = document.getElementById('logo-link');
+            // Normalize path for both "/" and "/index.html"
+            const path = window.location.pathname.replace(/\/$/, '');
+            if (path.endsWith('/index.html') || path === '' || path.endsWith('/coding-club-website')) {
+                logoLink.removeAttribute('href');
+                logoLink.style.cursor = 'default';
+                logoLink.addEventListener('click', function(e) { e.preventDefault(); });
+            }
+        });
+    </script>
+</body>
+</html>
